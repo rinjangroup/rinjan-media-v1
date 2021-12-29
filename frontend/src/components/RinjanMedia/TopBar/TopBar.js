@@ -40,8 +40,8 @@ const TopBar = () => {
               <NavDropdown.Item href="#action/3.1">Indonesia</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">English</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Item className='me-3'>
-              <Button variant='primary'>Sign In</Button>
+            <Nav.Item className='mx-3'>
+              <Button variant='primary' as={Link} to={'/login'} >Sign In</Button>
             </Nav.Item>
             <Nav.Item>
               <Button variant='warning' className='text-light'>Sign Up</Button>
