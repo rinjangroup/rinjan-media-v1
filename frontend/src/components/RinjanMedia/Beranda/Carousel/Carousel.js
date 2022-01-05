@@ -1,6 +1,5 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
-import './../Carousel/Carousel.module.scss'
 import Button from 'react-bootstrap/Button'
 
 const CarouselSection = () => {
@@ -11,7 +10,7 @@ const CarouselSection = () => {
         <Container className='warding-carousel py-5'>
           <h1>Temukan<br/> Peluang Bisnis Anda <br/> Bersama Kami</h1>
           <h5>Membangun bisnis jadi lebih mudah <br/>bersama tim professional <br/> dan berpengalaman!</h5>
-          <Button className='px-5 my-4'>Mulai Sekarang</Button>
+          <Button className='rounded-pill px-5 my-4'>Mulai Sekarang</Button>
         </Container>
       </Container>
       {/* <Carousel>

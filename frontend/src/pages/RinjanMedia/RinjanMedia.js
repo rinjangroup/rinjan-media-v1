@@ -1,5 +1,9 @@
 import React from 'react'
-import Carousel from '../../components/RinjanMedia/Carousel/Carousel'
+import BusinessSolution from '../../components/RinjanMedia/Beranda/BusinessSolution/BusinessSolution'
+import Carousel from '../../components/RinjanMedia/Beranda/Carousel/Carousel'
+import SectionListProject from '../../components/RinjanMedia/Beranda/SectionListProject/SectionListProject'
+import Testimonials from '../../components/RinjanMedia/Beranda/Testimonials/Testimonials'
+import Footer from '../../components/RinjanMedia/Footer/Footer'
 import TopBar from '../../components/RinjanMedia/TopBar/TopBar'
 
 export default function RinjanMedia() {
@@ -7,6 +11,10 @@ export default function RinjanMedia() {
     <>
       <TopBar/>
       <Carousel/>
+      <SectionListProject/>
+      <Testimonials/>
+      <BusinessSolution/>
+      <Footer/>
     </>
   )
 }
