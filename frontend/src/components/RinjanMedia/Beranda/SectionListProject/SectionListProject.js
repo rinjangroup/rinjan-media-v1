@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
+import { Link } from 'react-router-dom'
 import Undraw1 from '../../../../assets/img/undraw1.svg'
 import image1 from '../../../../assets/img/image1.jpg'
 import image2 from '../../../../assets/img/image2.jpg'
@@ -16,21 +17,21 @@ const data = [
     logo: image1,
     heading: 'Wujudkan Website Impianmu Bersama Kami !',
     paragraf: 'Rinjan Web Developer menyediakan layanan perancangan website dengan rekomendasi domain dan hosting murah dan berkualitas.',
-    href: ''
+    href: '/web'
   },
   {
     title: 'rinjan design studio',
     logo: image2,
     heading: 'Maksimalkan Bisnis Anda Dengan Desain Kekinian !',
     paragraf: 'Rinjan Designer Studio memberikan layanan jasa desain dan percetakan untuk kebutuhan Bisnis dan promosi.',
-    href: ''
+    href: '/design-studio'
   },
   {
     title: 'rinjan wifi',
     logo: image3,
     heading: 'Dapatkan Akses Internet Murah Cepat Dan Berkualitas !',
     paragraf: 'Memberikan layanan jaringan internet sebagai media pendukung pembelajaran, bisnis online, dengan biaya terjangkau.',
-    href: ''
+    href: '/wifi'
   }
 ]
 
@@ -53,20 +54,27 @@ export default function SectionListProject() {
         {data !== undefined && data.map((val, idx) => {
             return (
               <Row className='d-flex align-items-center my-5'>
-                <Col sm={4}>
-                  <Card className='shadow-lg d-flex justify-content-center card-section-list-project border-0' style={{width: '350px', height: '230px', borderRadius: '15px'}}>
-                    <img src={val.logo} alt='alt' className='m-5'/>
+                <Col sm={4} >
+                  <Card
+                    key={idx}
+                    as={Link}
+                    to={val.href}
+                    className='shadow-lg d-flex justify-content-center card-section-list-project border-0 ' 
+                    style={{width: '350px', height: '230px', borderRadius: '15px'}}
+                    >
+                      <img src={val.logo} alt='alt' className='m-5'/>
                   </Card>
                 </Col>
                 <Col>
                   <h3><strong>{val.heading}</strong></h3>
                   <p>{val.paragraf}</p>
-                  <Button className='rounded-pill px-5 py-2'><strong>Selengkapnya</strong></Button>
+                  <Button as={Link} to={val.href} className='rounded-pill px-5 py-2'><strong>Selengkapnya</strong></Button>
                 </Col>
               </Row>
             )
           })
         }
+        {/* <CardAnimations/> */}
       </Container>
 
       <Container style={{marginTop: '100px', marginBottom: '100px'}}>

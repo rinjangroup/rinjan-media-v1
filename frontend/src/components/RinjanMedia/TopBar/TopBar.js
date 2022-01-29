@@ -26,9 +26,9 @@ const TopBar = () => {
               <Nav.Link className='text-primary' href="/">Profil</Nav.Link>
             </Nav.Item>
             <NavDropdown title={<span className='text-primary'>Layanan</span>} id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Rijan Website</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Rinjan Design</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Wifi Rinjan</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/web">Rijan Website</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/design-studio">Rinjan Design</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/wifi">Wifi Rinjan</NavDropdown.Item>
             </NavDropdown>
             <Nav.Item>
               <Nav.Link className='text-primary' href="link-2">Tim Rinjan</Nav.Link>

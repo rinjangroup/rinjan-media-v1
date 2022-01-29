@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col'
 import Logo from '../../../assets/logo/logo-footer.png'
 import { BsFacebook } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
-import { IoLogoWhatsapp } from "react-icons/io5";
+import { RiWhatsappFill } from "react-icons/ri";
 import { BsYoutube } from "react-icons/bs";
 
 
@@ -21,7 +21,7 @@ export default function Footer() {
             <div className='text-light fs-1 d-flex justify-content-evenly mt-4'>
               <BsFacebook/>
               <AiFillInstagram/>
-              <IoLogoWhatsapp/>
+              <RiWhatsappFill/>
               <BsYoutube/>
             </div>
           </Col>
