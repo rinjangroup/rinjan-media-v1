@@ -11,8 +11,9 @@ import { BsYoutube } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <div className='bg-footer'>
-      <Container fluid className='content-footer'>
+    <div>
+      <div className='bg-footer'/>
+      <Container fluid className='content-footer' style={{backgroundColor: '#1759BB'}}>
         <Row>
           <Col>
             <div className='bg-light rounded-pill text-center'>

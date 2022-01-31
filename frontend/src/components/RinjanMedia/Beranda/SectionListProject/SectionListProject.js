@@ -41,7 +41,7 @@ export default function SectionListProject() {
       <Container className='my-5'>
         <Row className='d-flex align-items-center'>
           <Col sm={4}>
-            <img src={Undraw1} alt='alt'/>
+            <img src={Undraw1} alt='alt' className='img-fluid'/>
           </Col>
           <Col className='text-primary'>
             <h2>Temukan Bisnis Anda</h2>
@@ -62,7 +62,7 @@ export default function SectionListProject() {
                     className='shadow-lg d-flex justify-content-center card-section-list-project border-0 ' 
                     style={{width: '350px', height: '230px', borderRadius: '15px'}}
                     >
-                      <img src={val.logo} alt='alt' className='m-5'/>
+                      <img src={val.logo} alt='alt' className='m-5 img-fluid'/>
                   </Card>
                 </Col>
                 <Col>
