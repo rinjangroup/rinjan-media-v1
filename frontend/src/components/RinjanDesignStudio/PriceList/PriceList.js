@@ -55,7 +55,7 @@ const PriceList = () => {
 		'Sertifikat',
 		'Stiker',
 		'Kop Surat',
-		'Atk',
+		'Stempel',
 		'Undangan',
 		'Merchandise',
 		'Signage',
@@ -70,7 +70,7 @@ const PriceList = () => {
             return (
               <Col key={idx} sm={6} className='text-center'>
                 <Card
-                  className='bg-linear-gradient-primary pt-5 border-0 shadow-lg'
+                  className='bg-linear-gradient-primary pt-5 border-0 shadow-lg mb-4'
                   style={{borderRadius: '15px'}}
                 >
                   <h2 className='text-light fw-bold'>{val.title}</h2>
@@ -87,9 +87,9 @@ const PriceList = () => {
                       color={"#fff"}
                     />
                   </div>
-									<div>
-										<Button variant='warning' className='rounded-pill px-4 shadow mb-4'>Pesan Sekarang</Button>
-									</div>
+					<div>
+						<Button variant='warning' className='rounded-pill px-4 shadow mb-4'>Pesan Sekarang</Button>
+					</div>
                 </Card>
               </Col>
             )
@@ -106,7 +106,7 @@ const PriceList = () => {
 					return (
 						<Col sm={4}>
 							<Card 
-								className='bg-linear-gradient-primary border-0 shadow-lg py-3'
+								className='bg-linear-gradient-primary border-0 shadow-lg py-3 mb-4'
 								style={{borderRadius: '15px'}}
 							>
 								<h1 className='text-light text-center'><strong>{val}</strong></h1>
@@ -118,24 +118,24 @@ const PriceList = () => {
 			</Container>
 
 			<Container style={{marginTop: '100px', marginBottom: '100px'}}>
-        <Row>
-          <Col>
-            <Form className='d-flex justify-content-center'>
-              <Form.Floating className="me-3 text-secondary" >
-                <Form.Control
-                  id="floatingInputCustom"
-                  type="email"
-                  placeholder="name@example.com"
-                  className='border-warning rounded-pill shadow'
-                  style={{width: '350px'}}
-                />
-                <label htmlFor="floatingInputCustom">Masukkan Email disini</label>
-              </Form.Floating>
-              <Button className='rounded-pill px-5 shadow' variant='warning' type='submit'><strong>Gabung</strong></Button>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
+				<Row>
+					<Col>
+						<Form className='d-flex justify-content-center'>
+						<Form.Floating className="me-3 text-secondary" >
+							<Form.Control
+							id="floatingInputCustom"
+							type="email"
+							placeholder="name@example.com"
+							className='border-warning rounded-pill shadow'
+							style={{width: '350px'}}
+							/>
+							<label htmlFor="floatingInputCustom">Masukkan Email disini</label>
+						</Form.Floating>
+						<Button className='rounded-pill px-5 shadow' variant='warning' type='submit'><strong>Gabung</strong></Button>
+						</Form>
+					</Col>
+				</Row>
+			</Container>
 		</>
 	)
 }

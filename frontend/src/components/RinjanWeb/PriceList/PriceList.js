@@ -73,7 +73,7 @@ export default function PriceList() {
               <Col key={idx} sm={6} className='text-center'>
                 <h1 className='mt-5'>{val.title}</h1>
                 <Card
-                  className='bg-linear-gradient-primary pt-5 border-0 shadow-lg'
+                  className='bg-linear-gradient-primary pt-5 border-0 shadow-lg mb-3'
                   style={{borderRadius: '15px'}}
                 >
                   <h3 className='text-light'>Mulai</h3>

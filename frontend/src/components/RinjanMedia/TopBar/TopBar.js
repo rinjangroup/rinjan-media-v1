@@ -23,7 +23,7 @@ const TopBar = () => {
               <Nav.Link className='text-primary' href="/">Beranda</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link className='text-primary' href="/">Profil</Nav.Link>
+              <Nav.Link className='text-primary' href="/profile">Profil</Nav.Link>
             </Nav.Item>
             <NavDropdown title={<span className='text-primary'>Layanan</span>} id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/web">Rijan Website</NavDropdown.Item>
@@ -31,7 +31,7 @@ const TopBar = () => {
               <NavDropdown.Item as={Link} to="/wifi">Wifi Rinjan</NavDropdown.Item>
             </NavDropdown>
             <Nav.Item>
-              <Nav.Link className='text-primary' href="link-2">Tim Rinjan</Nav.Link>
+              <Nav.Link className='text-primary' href="/team">Tim Rinjan</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link className='text-primary' href="link-2">Kontak</Nav.Link>

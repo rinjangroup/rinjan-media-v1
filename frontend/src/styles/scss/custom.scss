@@ -32,8 +32,12 @@ $warning: #FFC700;
 }
 
 .bg-linear-gradient-primary{
-    margin: 30px 0 30px 0;
+    // margin: 30px 0 30px 0;
     background-image: linear-gradient(to top right, #0085FF, #00E0FF);
+}
+
+.bg-linear-gradient-semi-primary{
+    background-image: linear-gradient(to top right, #FFFFFF, #00D1FF);
 }
 
 .accordion {

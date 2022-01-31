@@ -24,7 +24,7 @@ const dataTestimonials = [
 export default function Testimonials() {
   return (
     <>
-      <div className='bg-linear-gradient-primary'>
+      <div className='bg-linear-gradient-primary mb-5'>
         <Container className='py-5'>
           <Row className='d-flex align-items-center'>
             <Col className='text-white'>
