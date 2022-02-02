@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import ReactStars from "react-rating-stars-component";
+import { LINKWHATSAPPWEB } from '../../../helpers/constants'
+import toast, { Toaster } from 'react-hot-toast';
 
 const dataPriceList = [
   {
@@ -60,6 +62,13 @@ const dataPriceList = [
 ]
 
 export default function PriceList() {
+  const notify = () => toast.error('Maaf... Masih dalam pengembangan :(', {
+		style: {
+			borderRadius: '10px',
+			background: '#333',
+			color: '#fff'
+		}
+	});
   return (
     <>
       <Container className='my-5 pt-5 text-center'>
@@ -90,9 +99,13 @@ export default function PriceList() {
                       color={"#fff"}
                     />
                   </div>
-                  <Button style={{borderRadius: '0 0 15px 15px'}}>Lihat Detail</Button>
+                  <Button style={{borderRadius: '0 0 15px 15px'}} onClick={notify}>Lihat Detail</Button>
+                  <Toaster 
+                    position="top-center"
+                    reverseOrder={false}
+                  />
                 </Card>
-                <Button variant='warning' className='rounded-pill px-4 shadow'>Pesan Sekarang</Button>
+                <Button variant='warning' className='rounded-pill px-4 shadow' href={LINKWHATSAPPWEB} target="_blank">Pesan Sekarang</Button>
               </Col>
             )
           })}

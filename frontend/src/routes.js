@@ -7,6 +7,7 @@ import RinjanDesignStudio from './pages/RinjanDesignStudio/RinjanDesignStudio';
 import RinjanWifi from './pages/RinjanWifi/RinjanWifi';
 import RinjanTeam from './pages/RinjanMedia/RinjanTeam';
 import RinjanProfile from './pages/RinjanMedia/RinjanProfile';
+import PageNotFound404 from './components/PageNotFound404/PageNotFound404';
 
 export default function routes() {
   return (
@@ -20,6 +21,7 @@ export default function routes() {
         <Route path="/web" element={<RinjanWeb/>}/>
         <Route path="/design-studio" element={<RinjanDesignStudio/>}/>
         <Route path="/wifi" element={<RinjanWifi/>}/>
+        <Route path="/404" element={<PageNotFound404/>}/>
       </Routes>
     </main>
   )

@@ -27,7 +27,7 @@ export default function Testimonials() {
       <div className='bg-linear-gradient-primary mb-5'>
         <Container className='py-5'>
           <Row className='d-flex align-items-center'>
-            <Col className='text-white'>
+            <Col className='text-white' sm={6} xs={12}>
               <Row>
                 <Col className='d-flex me-5'>
                   <FaQuoteLeft style={{fontSize: '50px'}}/>
@@ -39,7 +39,7 @@ export default function Testimonials() {
               </Row>
               <FaQuoteRight className='float-end me-5' style={{fontSize: '35px'}}/>
             </Col>
-            <Col className='bg-light py-4' style={{borderRadius: '15px'}}>
+            <Col className='bg-light py-4 my-5' style={{borderRadius: '15px'}} sm={6} xs={12}>
               {dataTestimonials !== undefined && dataTestimonials.map((val, idx) => {
                 return (
                   <Row className='d-flex align-items-center mt-3'>

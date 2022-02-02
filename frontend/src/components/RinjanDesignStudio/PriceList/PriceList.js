@@ -5,7 +5,8 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import ReactStars from "react-rating-stars-component";
-import Form from 'react-bootstrap/Form'
+import TextInputEmail from '../../TextInputEmail/TextInputEmail';
+import { LINKWHATSAPPDESIGN } from '../../../helpers/constants';
 
 const PriceList = () => {
 	const dataPriceList = [
@@ -88,7 +89,7 @@ const PriceList = () => {
                     />
                   </div>
 					<div>
-						<Button variant='warning' className='rounded-pill px-4 shadow mb-4'>Pesan Sekarang</Button>
+						<Button variant='warning' className='rounded-pill px-4 shadow mb-4' href={LINKWHATSAPPDESIGN} target="_blank">Pesan Sekarang</Button>
 					</div>
                 </Card>
               </Col>
@@ -117,25 +118,7 @@ const PriceList = () => {
 				</Row>
 			</Container>
 
-			<Container style={{marginTop: '100px', marginBottom: '100px'}}>
-				<Row>
-					<Col>
-						<Form className='d-flex justify-content-center'>
-						<Form.Floating className="me-3 text-secondary" >
-							<Form.Control
-							id="floatingInputCustom"
-							type="email"
-							placeholder="name@example.com"
-							className='border-warning rounded-pill shadow'
-							style={{width: '350px'}}
-							/>
-							<label htmlFor="floatingInputCustom">Masukkan Email disini</label>
-						</Form.Floating>
-						<Button className='rounded-pill px-5 shadow' variant='warning' type='submit'><strong>Gabung</strong></Button>
-						</Form>
-					</Col>
-				</Row>
-			</Container>
+			<TextInputEmail/>
 		</>
 	)
 }

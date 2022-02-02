@@ -4,8 +4,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
-
+import TextInputEmail from '../../TextInputEmail/TextInputEmail'
+import { LINKWHATSAPPWEB } from '../../../helpers/constants'
 
 export default function MaintenanceList() {
 
@@ -108,7 +108,7 @@ export default function MaintenanceList() {
                         </>
                       )
                     })}
-                    <Button variant={`outline-${val.color}`}>Pesan sekarang</Button>
+                    <Button variant={`outline-${val.color}`} href={LINKWHATSAPPWEB} target='_blank'>Pesan sekarang</Button>
                   </div>
                 </Card>
               </Col>
@@ -119,25 +119,7 @@ export default function MaintenanceList() {
         </Container>
       </div>
 
-      <Container style={{marginTop: '100px', marginBottom: '100px'}}>
-        <Row>
-          <Col>
-            <Form className='d-flex justify-content-center'>
-              <Form.Floating className="me-3 text-secondary" >
-                <Form.Control
-                  id="floatingInputCustom"
-                  type="email"
-                  placeholder="name@example.com"
-                  className='border-warning rounded-pill shadow'
-                  style={{width: '350px'}}
-                />
-                <label htmlFor="floatingInputCustom">Masukkan Email disini</label>
-              </Form.Floating>
-              <Button className='rounded-pill px-5 shadow' variant='warning' type='submit'><strong>Gabung</strong></Button>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
+      <TextInputEmail/>
       
     </>
   )

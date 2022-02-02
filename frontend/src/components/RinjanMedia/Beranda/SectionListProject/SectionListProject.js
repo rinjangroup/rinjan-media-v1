@@ -4,12 +4,12 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom'
 import Undraw1 from '../../../../assets/img/undraw1.svg'
 import image1 from '../../../../assets/img/image1.jpg'
 import image2 from '../../../../assets/img/image2.jpg'
 import image3 from '../../../../assets/img/image3.jpg'
+import TextInputEmail from '../../../TextInputEmail/TextInputEmail'
 
 const data = [
   {
@@ -31,7 +31,7 @@ const data = [
     logo: image3,
     heading: 'Dapatkan Akses Internet Murah Cepat Dan Berkualitas !',
     paragraf: 'Memberikan layanan jaringan internet sebagai media pendukung pembelajaran, bisnis online, dengan biaya terjangkau.',
-    href: '/wifi'
+    href: '/404'
   }
 ]
 
@@ -68,34 +68,16 @@ export default function SectionListProject() {
                 <Col>
                   <h3><strong>{val.heading}</strong></h3>
                   <p>{val.paragraf}</p>
-                  <Button as={Link} to={val.href} className='rounded-pill px-5 py-2'><strong>Selengkapnya</strong></Button>
+                  <Button href={val.href} className='rounded-pill px-5 py-2'><strong>Selengkapnya</strong></Button>
                 </Col>
               </Row>
             )
           })
         }
-        {/* <CardAnimations/> */}
       </Container>
 
-      <Container style={{marginTop: '100px', marginBottom: '100px'}}>
-        <Row>
-          <Col>
-            <Form className='d-flex justify-content-center'>
-              <Form.Floating className="me-3 text-secondary" >
-                <Form.Control
-                  id="floatingInputCustom"
-                  type="email"
-                  placeholder="name@example.com"
-                  className='border-warning rounded-pill shadow'
-                  style={{width: '350px'}}
-                />
-                <label htmlFor="floatingInputCustom">Masukkan Email disini</label>
-              </Form.Floating>
-              <Button className='rounded-pill px-5 shadow' variant='warning' type='submit'><strong>Gabung</strong></Button>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
+      <TextInputEmail/>
+
     </>
   )
 }

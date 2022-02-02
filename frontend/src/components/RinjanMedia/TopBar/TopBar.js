@@ -26,25 +26,25 @@ const TopBar = () => {
               <Nav.Link className='text-primary' href="/profile">Profil</Nav.Link>
             </Nav.Item>
             <NavDropdown title={<span className='text-primary'>Layanan</span>} id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/web">Rijan Website</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/design-studio">Rinjan Design</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/wifi">Wifi Rinjan</NavDropdown.Item>
+              <NavDropdown.Item href="/web">Rijan Website</NavDropdown.Item>
+              <NavDropdown.Item href="/design-studio">Rinjan Design</NavDropdown.Item>
+              <NavDropdown.Item href="/404">Wifi Rinjan</NavDropdown.Item>
             </NavDropdown>
             <Nav.Item>
               <Nav.Link className='text-primary' href="/team">Tim Rinjan</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link className='text-primary' href="link-2">Kontak</Nav.Link>
+              <Nav.Link className='text-primary' href="/404">Kontak</Nav.Link>
             </Nav.Item>
             <NavDropdown className='text-primary' title={<span className='text-primary'>Bahasa</span>} id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Indonesia</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">English</NavDropdown.Item>
+              <NavDropdown.Item>Indonesia</NavDropdown.Item>
+              <NavDropdown.Item>English</NavDropdown.Item>
             </NavDropdown>
             <Nav.Item className='mx-3'>
-              <Button variant='primary' as={Link} to={'/login'} >Sign In</Button>
+              <Button variant='primary' href={'/404'} >Sign In</Button>
             </Nav.Item>
             <Nav.Item>
-              <Button variant='warning' className='text-light'>Sign Up</Button>
+              <Button variant='warning' href={'/404'} className='text-light'>Sign Up</Button>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

@@ -2,12 +2,11 @@ import React from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
-import Form from 'react-bootstrap/esm/Form';
-import Button from 'react-bootstrap/esm/Button';
 import Image from '../../../../assets/img/undraw4.png'
 import Testi1 from '../../../../assets/img/testi1.png'
 import Testi2 from '../../../../assets/img/testi2.png'
 import Testi3 from '../../../../assets/img/testi3.png'
+import TextInputEmail from '../../../TextInputEmail/TextInputEmail';
 
 export default function Testimonials() {
 	const dataTesti = [
@@ -54,25 +53,7 @@ export default function Testimonials() {
 				</Container>
 			</Container>
 
-			<Container style={{marginTop: '100px', marginBottom: '100px'}}>
-        <Row>
-          <Col>
-            <Form className='d-flex justify-content-center'>
-              <Form.Floating className="me-3 text-secondary" >
-                <Form.Control
-                  id="floatingInputCustom"
-                  type="email"
-                  placeholder="name@example.com"
-                  className='border-warning rounded-pill shadow'
-                  style={{width: '350px'}}
-                />
-                <label htmlFor="floatingInputCustom">Masukkan Email disini</label>
-              </Form.Floating>
-              <Button className='rounded-pill px-5 shadow' variant='warning' type='submit'><strong>Gabung</strong></Button>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
+			<TextInputEmail/>
 		</>
 	);
 }
