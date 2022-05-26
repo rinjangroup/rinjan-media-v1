@@ -86,3 +86,18 @@ $warning: #FFC700;
     transition: box-shadow 0.5s;
     will-change: transform;
   }
+
+  .cursor-pointer {
+      cursor: pointer;
+  }
+
+  
+.profile-dropdown {
+    .dropdown-toggle{
+       padding: 0 !important;
+    }
+    .dropdown-toggle::after {
+        content: none !important;
+    }
+    
+}

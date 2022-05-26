@@ -34,7 +34,7 @@ export default function MaintenanceList() {
       ]
     },
     {
-      title: 'ADVACE Maintenance',
+      title: 'ADVANCE Maintenance',
       price: 'Rp. 3.000.000',
       color: 'success',
       features: [

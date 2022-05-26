@@ -1,13 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 import NavDropdown from 'react-bootstrap/NavDropdown'
+import { Link, useNavigate } from 'react-router-dom'
+import Axios from 'axios'
+
 import Logo from '../../../assets/logo/logo-rinjan-media.svg'
-import { Link } from 'react-router-dom'
+import Avatar from '../../../assets/img/profile.jpg'
+import { hostname } from '../../../helpers/constants'
 
 const TopBar = () => {
+  const [username, setUsername] = useState('')
+  const navigate = useNavigate()
+  Axios.defaults.withCredentials = true
+
+  useEffect(() => {
+    Axios.get(`${hostname}/isUserAuth`, {
+      headers: {
+        "x-access-token": localStorage.getItem("token")
+      },
+    }).then(() => {
+      if (localStorage.getItem("token")) {
+        setUsername(localStorage.getItem("username"))
+      }
+    })
+  }, [navigate])
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    window.location.reload(false)
+  }
   return (
     <>
     <Navbar bg="light" expand="lg" className='shadow' fixed="top">
@@ -26,7 +51,7 @@ const TopBar = () => {
               <Nav.Link className='text-primary' href="/profile">Profil</Nav.Link>
             </Nav.Item>
             <NavDropdown title={<span className='text-primary'>Layanan</span>} id="basic-nav-dropdown">
-              <NavDropdown.Item href="/web">Rijan Website</NavDropdown.Item>
+              <NavDropdown.Item href="/web">Rinjan Website</NavDropdown.Item>
               <NavDropdown.Item href="/design-studio">Rinjan Design</NavDropdown.Item>
               <NavDropdown.Item href="/404">Wifi Rinjan</NavDropdown.Item>
             </NavDropdown>
@@ -40,12 +65,24 @@ const TopBar = () => {
               <NavDropdown.Item>Indonesia</NavDropdown.Item>
               <NavDropdown.Item>English</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Item className='mx-3'>
-              <Button variant='primary' href={'/404'} >Sign In</Button>
-            </Nav.Item>
-            <Nav.Item>
-              <Button variant='warning' href={'/404'} className='text-light'>Sign Up</Button>
-            </Nav.Item>
+            {localStorage.getItem('token') ? 
+              <NavDropdown className='text-primary p-0 profile-dropdown ms-5' title={
+                <div>
+                  <img src={Avatar} className="user-avatar md-avatar rounded-circle img-fluid p-0" alt='alt' height={40} width={40}/>
+                  <span className='ms-2'>{`Hi ${username}`}</span>
+                </div>
+                } id="basic-nav-dropdown">
+                <NavDropdown.Item>My Profile</NavDropdown.Item>
+                <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
+              </NavDropdown> :
+              <><Nav.Item className='mx-3'>
+                  <Button variant='primary' href={'/sign-in'}>Sign In</Button>
+                </Nav.Item><Nav.Item>
+                    <Button variant='warning' href={'/sign-up'} className='text-light'>Sign Up</Button>
+                  </Nav.Item></>
+            }
+            
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
