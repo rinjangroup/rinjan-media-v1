@@ -46,9 +46,7 @@ const CarouselSection = () => {
                   <Col sm={4} xs={8} className='text-start '>
                     <h1 className='fw-bold h1'>{val.title_bold}</h1>
                     <h5 className='text-warning'>{val.desc}</h5>
-                    <div className='btn-carousel'>
-                      <Button className='rounded-pill btn-block my-1' href={LINKWHATSAPPWEB} target="_blank">Mulai Sekarang</Button>
-                    </div>
+                    <Button className='rounded-pill btn-block my-1 btn-carousel' href={LINKWHATSAPPWEB} target="_blank">Mulai Sekarang</Button>
                   </Col>
                 </Row>
               </Container>
