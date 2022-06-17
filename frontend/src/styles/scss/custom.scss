@@ -5,10 +5,43 @@
 }
 
 $warning: #FFC700;
+$primaryDark: #3E4095;
 
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
 @import 'bootstrap/scss/utilities';
+
+$utilities: (
+  "opacity": (
+    property: opacity,
+    responsive: true,
+    values: (
+      0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1,
+    )
+  )
+ );
+
+ @media(max-width: 576px) {
+    .carousel-caption {
+        padding-top: 0 !important;
+    }
+    .carousel-item h1 {
+    font-size: 12px;
+    }
+    .carousel-item h5 {
+        font-size: 10px;
+        }
+
+    .btn {
+        padding: 0.25rem 0.5rem !important;
+        font-size: 0.500rem !important;
+    }
+}
+
 
 .section-container{
     background-image: url('../../assets/img/carousel1.png');
@@ -100,4 +133,9 @@ $warning: #FFC700;
         content: none !important;
     }
     
+}
+
+.btn-primary-dark {
+    background-color: $primaryDark !important;
+    border-color: $primaryDark !important;
 }

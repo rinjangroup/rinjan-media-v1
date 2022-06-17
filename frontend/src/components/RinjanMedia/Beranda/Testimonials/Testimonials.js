@@ -27,7 +27,7 @@ export default function Testimonials() {
       <div className='bg-linear-gradient-primary mb-5'>
         <Container className='py-5'>
           <Row className='d-flex align-items-center'>
-            <Col className='text-white' sm={6} xs={12}>
+            <Col className='text-white' xs={12} md={12} xl={6}>
               <Row>
                 <Col className='d-flex me-5'>
                   <FaQuoteLeft style={{fontSize: '50px'}}/>
@@ -39,20 +39,23 @@ export default function Testimonials() {
               </Row>
               <FaQuoteRight className='float-end me-5' style={{fontSize: '35px'}}/>
             </Col>
-            <Col className='bg-light py-4 my-5' style={{borderRadius: '15px'}} sm={6} xs={12}>
+            <Col className='bg-light my-5' style={{borderRadius: '15px'}} sm={12} md={12} xl={6}>
               {dataTestimonials !== undefined && dataTestimonials.map((val, idx) => {
                 return (
-                  <Row className='d-flex align-items-center mt-3'>
-                    <Col sm={2} className='d-flex justify-content-center'>
-                      <img src={val.image} alt='alt'/>
-                    </Col>
-                    <Col>
-                      <h3><strong>{val.name}</strong></h3>
-                      <p>{val.comment}</p>
-                      <hr/>
-                      <p className='text-primary'>{val.date}</p>
-                    </Col>
-                  </Row>
+                  <Container>
+
+                    <Row className='d-flex align-items-center mt-3'>
+                      <Col sm={2} xl={4} className='d-flex justify-content-center'>
+                        <img src={val.image} alt='alt' className='img-fluid'/>
+                      </Col>
+                      <Col sm={10} xl={8}>
+                        <h3><strong>{val.name}</strong></h3>
+                        <p>{val.comment}</p>
+                        <hr/>
+                        <p className='text-primary'>{val.date}</p>
+                      </Col>
+                    </Row>
+                  </Container>
                 )
               })}
             </Col>

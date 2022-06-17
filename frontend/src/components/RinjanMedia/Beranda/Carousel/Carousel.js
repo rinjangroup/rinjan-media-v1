@@ -40,13 +40,15 @@ const CarouselSection = () => {
               src={val.img}
               alt={val.alt}
             />
-            <Carousel.Caption>
+            <Carousel.Caption >
               <Container>
                 <Row>
                   <Col sm={4} xs={8} className='text-start '>
-                    <h1 className='fw-bold'>{val.title_bold}</h1>
+                    <h1 className='fw-bold h1'>{val.title_bold}</h1>
                     <h5 className='text-warning'>{val.desc}</h5>
-                    <Button className='rounded-pill px-5 my-4' href={LINKWHATSAPPWEB} target="_blank">Mulai Sekarang</Button>
+                    <div className='btn-carousel'>
+                      <Button className='rounded-pill btn-block my-1' href={LINKWHATSAPPWEB} target="_blank">Mulai Sekarang</Button>
+                    </div>
                   </Col>
                 </Row>
               </Container>

@@ -53,7 +53,7 @@ const TopBar = () => {
             <NavDropdown title={<span className='text-primary'>Layanan</span>} id="basic-nav-dropdown">
               <NavDropdown.Item href="/web">Rinjan Website</NavDropdown.Item>
               <NavDropdown.Item href="/design-studio">Rinjan Design</NavDropdown.Item>
-              <NavDropdown.Item href="/404">Wifi Rinjan</NavDropdown.Item>
+              <NavDropdown.Item href="/wifi">Wifi Rinjan</NavDropdown.Item>
             </NavDropdown>
             <Nav.Item>
               <Nav.Link className='text-primary' href="/team">Tim Rinjan</Nav.Link>
@@ -75,11 +75,14 @@ const TopBar = () => {
                 <NavDropdown.Item>My Profile</NavDropdown.Item>
                 <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
               </NavDropdown> :
-              <><Nav.Item className='mx-3'>
+              <>
+                <Nav.Item className='mx-1'>
                   <Button variant='primary' href={'/sign-in'}>Sign In</Button>
-                </Nav.Item><Nav.Item>
+                </Nav.Item>
+                <Nav.Item className='mx-1'>
                     <Button variant='warning' href={'/sign-up'} className='text-light'>Sign Up</Button>
-                  </Nav.Item></>
+                </Nav.Item>
+              </>
             }
             
             

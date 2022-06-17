@@ -90,7 +90,7 @@ export default function MaintenanceList() {
           <Row>
           {dataMaintenance !== undefined && dataMaintenance.map((val, idx) => {
             return (
-              <Col>
+              <Col sm={12} md={4} xl={4} className='mt-2'>
                 <Card 
                   className='bg-secondary border-0'
                   style={{borderRadius: '0 40% 0 50px'}}

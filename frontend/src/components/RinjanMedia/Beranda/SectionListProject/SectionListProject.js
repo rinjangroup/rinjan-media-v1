@@ -31,7 +31,7 @@ const data = [
     logo: image3,
     heading: 'Dapatkan Akses Internet Murah Cepat Dan Berkualitas !',
     paragraf: 'Memberikan layanan jaringan internet sebagai media pendukung pembelajaran, bisnis online, dengan biaya terjangkau.',
-    href: '/404'
+    href: '/wifi'
   }
 ]
 
@@ -39,13 +39,13 @@ export default function SectionListProject() {
   return (
     <>
       <Container className='my-5'>
-        <Row className='d-flex align-items-center'>
-          <Col sm={4}>
+        <Row className='d-flex align-items-center text-center'>
+          <Col sm={12} md={4} xl={4}>
             <img src={Undraw1} alt='alt' className='img-fluid'/>
           </Col>
-          <Col className='text-primary'>
-            <h2>Temukan Bisnis Anda</h2>
-            <h1><strong>Pilih Layanan Kami</strong></h1>
+          <Col sm={12} md={8} xl={8} className='text-primary '>
+            <h2 className='h2'>Temukan Bisnis Anda</h2>
+            <h1 className='h1'><strong>Pilih Layanan Kami</strong></h1>
           </Col>
         </Row>
       </Container>
@@ -54,18 +54,18 @@ export default function SectionListProject() {
         {data !== undefined && data.map((val, idx) => {
             return (
               <Row className='d-flex align-items-center my-5'>
-                <Col sm={4} >
+                <Col sm={12} md={4} xl={4} >
                   <Card
                     key={idx}
                     as={Link}
                     to={val.href}
-                    className='shadow-lg d-flex justify-content-center card-section-list-project border-0 ' 
-                    style={{width: '350px', height: '230px', borderRadius: '15px'}}
+                    className='shadow-lg d-flex justify-content-center card-section-list-project border-0' 
+                    style={{ borderRadius: '15px'}}
                     >
                       <img src={val.logo} alt='alt' className='m-5 img-fluid'/>
                   </Card>
                 </Col>
-                <Col>
+                <Col sm={12} md={12} xl={8} className="mt-4">
                   <h3><strong>{val.heading}</strong></h3>
                   <p>{val.paragraf}</p>
                   <Button href={val.href} className='rounded-pill px-5 py-2'><strong>Selengkapnya</strong></Button>
