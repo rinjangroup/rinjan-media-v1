@@ -64,7 +64,7 @@ function FormContact() {
             <Col>
               <Form.Group id="name" className="mb-4 ">
                 <InputGroup>
-                  <Form.Control autoFocus required type="text" placeholder='Nama*' className=' py-2' />
+                  <Form.Control required type="text" placeholder='Nama*' className=' py-2' />
                 </InputGroup>
               </Form.Group>
             </Col>
