@@ -55,8 +55,8 @@ const Register = () => {
       <Container fluid>
         <Row> 
           <Col sm={12} md={6} xl={6} className='d-flex align-items-center justify-content-center'>
-            <div>
-              <img src={Logo} alt='alt' className='img-fluid'/>
+            <div className='d-block'>
+              <img src={Logo} alt='alt' className='img-fluid mt-5'/>
               <h1 className='text-primary mt-4'><strong>Sign Up</strong></h1>
                 <Form className="mt-4" onSubmit={onSubmit}>
                   <Row>
@@ -118,13 +118,13 @@ const Register = () => {
                 </div>
                 <p className='mb-0 mt-4 text-primary'><strong>Sudah punya akun? </strong></p>
                 <Button variant='primary' className='rounded-pill pe-4 my-3' as={Link} to={'/sign-in'}> <FiChevronLeft/> Sign In</Button>
-                <div className='text-primary cursor-pointer' onClick={() => navigate(-1)}>
+                <div className='text-primary cursor-pointer mb-5' onClick={() => navigate(-1)}>
                   <FiChevronLeft/>
                   <span>kembali</span>
                 </div>
             </div>
           </Col>
-          <Col sm={0} className='d-flex align-items-center px-0' style={{ backgroundImage: `url(${Union})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: '100vh' }}>
+          <Col sm={0} className='d-flex align-items-center px-0' style={{ backgroundImage: `url(${Union})`,backgroundRepeat: 'no-repeat', backgroundPosition: "right top" }}>
             <img src={Undraw} alt='alt' className='img-fluid'/>
           </Col>
         </Row>

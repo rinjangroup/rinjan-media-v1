@@ -22,13 +22,13 @@ const PackageList = () => {
         </Container>
         <Container>
             <Row>
-                <Col>
+                <Col sm={12} xl={4} className='p-5'>
                     <img alt='alt' src={wifi7} className='img-fluid'/>
                 </Col>
-                <Col>
+                <Col sm={12} xl={4} className='p-5'>
                     <img alt='alt' src={wifi10} className='img-fluid'/>
                 </Col>
-                <Col>
+                <Col sm={12} xl={4} className='p-5'>
                     <img alt='alt' src={wifi15} className='img-fluid'/>
                 </Col>
             </Row>

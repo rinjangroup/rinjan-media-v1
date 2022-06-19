@@ -59,7 +59,7 @@ const TopBar = () => {
               <Nav.Link className='text-primary' href="/team">Tim Rinjan</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link className='text-primary' href="/404">Kontak</Nav.Link>
+              <Nav.Link className='text-primary' href="/contact">Kontak</Nav.Link>
             </Nav.Item>
             <NavDropdown className='text-primary' title={<span className='text-primary'>Bahasa</span>} id="basic-nav-dropdown">
               <NavDropdown.Item>Indonesia</NavDropdown.Item>
