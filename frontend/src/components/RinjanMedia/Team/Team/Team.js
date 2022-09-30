@@ -1,42 +1,61 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
 import Button from 'react-bootstrap/esm/Button';
 import Col from 'react-bootstrap/esm/Col';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
-import Vektor1 from '../../../../assets/img/vektor1.png'
-import Vektor2 from '../../../../assets/img/vektor2.png'
-import Vektor3 from '../../../../assets/img/vektor3.png'
+import Jalal from '../../../../assets/team/jalal.png'
+import Putri from '../../../../assets/team/putri.png'
+import Kholis from '../../../../assets/team/kholis.png'
+import Ilham from '../../../../assets/team/ilham.png'
+import Rubi from '../../../../assets/team/rubi.png'
+import Faisal from '../../../../assets/team/faisal.png'
+import PakMahmud from '../../../../assets/team/pakmahmud.jpg'
+import Bima from '../../../../assets/team/bima.png'
+
+
 
 
 export default function Team() {
+
+	useEffect(() => {
+		AOS.init({ duration : 1000 });
+		AOS.refresh()
+	  }, []);
+
 	const dataTeams = [
 		{
-			img: Vektor1,
+			img: Jalal,
 			name: 'Nurul Jalal',
 			position: 'CEO'
 		},
 		{
-			img: Vektor2,
+			img: Ilham,
 			name: 'Putri Mulyansari',
-			position: 'CTO & Account Executive'
+			position: 'CTO'
 		},
 		{
-			img: Vektor3,
+			img: Bima,
+			name: 'Bima Jayusman',
+			position: 'CFO'
+		},
+		{
+			img: Kholis,
 			name: 'Nurkholis Majid',
 			position: 'Graphic Designer & Copywriter'
 		},
 		{
-			img: Vektor1,
-			name: 'Ilham Anas',
-			position: 'Programmer'
-		},
-		{
-			img: Vektor3,
+			img: Rubi,
 			name: 'Rubi Anggoro',
 			position: 'Programmer'
 		},
 		{
-			img: Vektor1,
+			img: Faisal,
+			name: 'Ahmad Faisal',
+			position: 'Marketing'
+		},
+		{
+			img: PakMahmud,
 			name: 'Mahmudin',
 			position: 'Direktur Utama'
 		}
@@ -55,8 +74,8 @@ export default function Team() {
 				<Row>
 				{dataTeams.length !== 0 && dataTeams.map((val, idx) => {
 					return (
-						<Col sm={4} className='text-center'>
-							<img src={val.img} alt='alt'  width={312} height={209}/>
+						<Col sm={4} className='text-center p-5' data-aos="fade-down">
+							<img src={val.img} alt='alt' className='img-fluid shadow p-3 mb-5 bg-body rounded-pill img-team'/>
 							<h3 className='mt-2'>{val.name}</h3>
 							<p>{val.position}</p>
 						</Col>

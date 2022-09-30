@@ -75,14 +75,14 @@ const TopBar = () => {
                 <NavDropdown.Item>My Profile</NavDropdown.Item>
                 <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
               </NavDropdown> :
-              <>
+              <div className='d-flex'>
                 <Nav.Item className='mx-1'>
-                  <Button variant='primary' href={'/sign-in'}>Sign In</Button>
+                  <Button variant='primary' className='rounded-pill' href={'/sign-in'}>Sign In</Button>
                 </Nav.Item>
                 <Nav.Item className='mx-1'>
-                    <Button variant='warning' href={'/sign-up'} className='text-light'>Sign Up</Button>
+                    <Button variant='warning' href={'/sign-up'} className='text-light rounded-pill'>Sign Up</Button>
                 </Nav.Item>
-              </>
+              </div>
             }
             
             

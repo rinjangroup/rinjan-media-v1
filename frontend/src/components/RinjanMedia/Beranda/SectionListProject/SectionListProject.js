@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from "aos";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
+
 import Undraw1 from '../../../../assets/img/undraw1.svg'
 import image1 from '../../../../assets/img/image1.jpg'
 import image2 from '../../../../assets/img/image2.jpg'
@@ -35,7 +37,13 @@ const data = [
   }
 ]
 
-export default function SectionListProject() {
+const SectionListProject = () => {
+
+  useEffect(() => {
+    AOS.init({ duration : 1000 });
+    AOS.refresh()
+  }, []);
+
   return (
     <>
       <Container className='my-5'>
@@ -53,9 +61,10 @@ export default function SectionListProject() {
       <Container className='my-5'>
         {data !== undefined && data.map((val, idx) => {
             return (
-              <Row className='d-flex align-items-center my-5'>
+              <Row className='d-flex align-items-center my-5' data-aos="fade-up">
                 <Col sm={12} md={4} xl={4} >
                   <Card
+                  
                     key={idx}
                     as={Link}
                     to={val.href}
@@ -81,3 +90,5 @@ export default function SectionListProject() {
     </>
   )
 }
+
+export default SectionListProject 

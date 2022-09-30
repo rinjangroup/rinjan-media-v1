@@ -3,11 +3,12 @@ import Col from 'react-bootstrap/esm/Col'
 import Container from 'react-bootstrap/esm/Container'
 import Row from 'react-bootstrap/esm/Row'
 import Button from 'react-bootstrap/esm/Button'
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
-import wifi7 from '../../assets/img/wifi/wifi7.jpg'
-import wifi10 from '../../assets/img/wifi/wifi10.jpg'
-import wifi15 from '../../assets/img/wifi/wifi15.jpg'
 import syarat from '../../assets/img/wifi/syarat.png'
+import StandartPackage from './packageInternet/StandartPackage'
+import PromoPackage from './packageInternet/PromoPackage'
 
 const PackageList = () => {
   return (
@@ -15,22 +16,26 @@ const PackageList = () => {
         <Container className='my-3'>
             <Row>
                 <Col className='text-center'>
-                    <h2 className='text-decoration-underline fw-bold'>PAKET INTERNET</h2>
+                    <h2 className='text-decoration-underline fw-bold'>PILIHAN PAKET INTERNET</h2>
                     <p>Kami memberikan layanan jaringan internet sebagai media pendukung pembelajaran, multimedia, bisnis online, dengan biaya terjangkau.</p>
                 </Col>
             </Row>
         </Container>
         <Container>
-            <Row>
-                <Col sm={12} xl={4} className='p-5'>
-                    <img alt='alt' src={wifi7} className='img-fluid'/>
-                </Col>
-                <Col sm={12} xl={4} className='p-5'>
-                    <img alt='alt' src={wifi10} className='img-fluid'/>
-                </Col>
-                <Col sm={12} xl={4} className='p-5'>
-                    <img alt='alt' src={wifi15} className='img-fluid'/>
-                </Col>
+            <Row className='tabs-package-list'>
+                <Tabs
+                    defaultActiveKey="1"
+                    id="fill-tab-example"
+                    className="mb-3 pe-0 shadow bg-body rounded-pill mr-3"
+                    fill
+                    >
+                    <Tab eventKey="1" title="Harga Normal" >
+                        <StandartPackage/>
+                    </Tab>
+                    <Tab eventKey="2" title="Harga Promo">
+                         <PromoPackage/>
+                    </Tab>
+                </Tabs>
             </Row>
         </Container>
         <Container className='text-center my-5'>

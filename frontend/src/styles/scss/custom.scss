@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 $warning: #FFC700;
@@ -31,13 +31,19 @@ $utilities: (
     }
     .carousel-item h1 {
         font-size: 10px;
+        margin-top: 0 !important;
+        margin-bottom: 5px !important;
     }
     .carousel-item h5 {
         font-size: 6px;
+        margin-bottom: 0 !important;
+    }
+    .carousel-item p {
+        font-size: 6px;
         margin-bottom: 0;
     }
-    .btn-carousel {
-        padding: 0.1rem 0.5rem !important;
+    .carousel-item .btn-carousel {
+        padding: 0.1rem 0.4rem !important;
         font-size: 0.4rem !important;
     }
 }
@@ -139,3 +145,44 @@ $utilities: (
     background-color: $primaryDark !important;
     border-color: $primaryDark !important;
 }
+
+.tabs-package-list{
+    .nav-item{
+        .active {
+            background-color: $primaryDark !important;
+            color: #FFFFFF !important;
+        }
+    }
+
+    li{
+        border-radius: 50rem !important;
+        button {
+            border-radius: 50rem !important;
+        }
+    }
+
+    // button {
+    //     border-radius: 50rem !important;
+    // }
+}
+
+.img-team:hover {
+    transition: 0.5s;
+    padding: 0 !important;
+}
+
+    .dropdown .dropdown-menu.show{
+        display: none !important;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block !important;
+    }
+    
+    .dropdown:focus .dropdown-menu {
+        display: block !important;
+    }
+
+
+
+

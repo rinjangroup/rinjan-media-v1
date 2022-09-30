@@ -2,22 +2,23 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import avatar from '../../../../assets/img/Avatar.jpg'
+import avatar1 from '../../../../assets/img/testi/nazar.jpeg'
+import avatar2 from '../../../../assets/img/testi/kosim.jpeg'
 import { FaQuoteLeft } from "react-icons/fa";
 import { FaQuoteRight } from "react-icons/fa";
 
 const dataTestimonials = [
   {
-    name: 'Mohammed',
-    comment: 'Pelayanan Terbaik Sepanjan Hayat Masih dikandung badan, pokonya bejo.',
-    date: 'Rabu, 8 Desember 2021',
-    image: avatar
+    name: 'Nazar Husain (Direktur Utama PT HARIAN PELITA SEJAHTERA)',
+    comment: 'Tim IT Rinjan Web sangat mendukung dan sigap melayani kami dalam perancangan website portal berita. Sehingga berita yang kami sajikan dapat ditampilkan secara cepat dan ter up to date.',
+    date: 'Senin, 27 Juni 2022',
+    image: avatar1
   },
   {
-    name: 'Kujem',
-    comment: 'Kaga Bakal nyesel sama hasil kerja tim ini.',
+    name: 'Kosim (Kepala Madrasah Aliyah Nurul Falah Ciater)',
+    comment: 'Kami sangat bangga sekali dengan anak didik dan lulusan Aliyah bisa membangun program ataupun layanan yang dikenal Rinjan Media. Pelayanan yang diberikan cukup memuaskan dan sumber daya manusia nya sangat profesional dalam bekerja. Sukses terus dan semangat...',
     date: 'Rabu, 8 Desember 2021',
-    image: avatar
+    image: avatar2
   }
 ]
 
@@ -45,10 +46,10 @@ export default function Testimonials() {
                   <Container>
 
                     <Row className='d-flex align-items-center mt-3'>
-                      <Col sm={2} xl={4} className='d-flex justify-content-center'>
-                        <img src={val.image} alt='alt' className='img-fluid'/>
+                      <Col xs={4} sm={2} xl={2}  className='d-flex justify-content-center'>
+                        <img src={val.image} alt='alt' className='img-fluid rounded-circle'/>
                       </Col>
-                      <Col sm={10} xl={8}>
+                      <Col xs={8} sm={10} xl={10}>
                         <h3><strong>{val.name}</strong></h3>
                         <p>{val.comment}</p>
                         <hr/>

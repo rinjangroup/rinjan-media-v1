@@ -10,11 +10,11 @@ export default function Carousel() {
 			<Container fluid className='bg-linear-gradient-semi-primary py-5'>
 				<Container>
 					<Row className='d-flex align-items-center'>
-						<Col>
+						<Col sm={12} xl={6}>
 							<h1 className='text-primary'><strong>Rinjan</strong> Team</h1>
 							<p>  Membangun, melihat peluang bisnis dan mengembangkan Sumber Daya Manusia yang kreatif, inovatif, dan berakhlak mulia untuk mempersiapkan dunia bisnis digital yang berbasis pada kebutuhan masyarakat</p>
 						</Col>
-						<Col className='text-center'>
+						<Col className='text-center ' xl={6} >
 							<img src={Img} alt='alt' className='img-fluid'/>
 						</Col>
 					</Row>

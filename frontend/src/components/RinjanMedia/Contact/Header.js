@@ -17,7 +17,7 @@ function Header() {
 Hubungi kami melalui formulir dibawah ini sekarang juga!</p>
                     <Button className='px-4 btn-warning rounded-pill'>Call Now</Button>
                 </Col>
-                <Col className='text-center' >
+                <Col className='text-center'>
                     <img alt='alt' src={imgHeader} className="img-fluid"/>
                 </Col>
             </Row>
